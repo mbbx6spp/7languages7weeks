@@ -41,6 +41,7 @@ Developer
 ---------
 
 Amendments to ***this*** repository will be made by 
+
 --add your info here instead of mine--
 
 * [@SusanPotter](http://twitter.com/SusanPotter) also known as 
@@ -62,6 +63,7 @@ License
 -------
 
 --express your content modifications license below--
+
 All code changes and content from blog posts found on the 
 [blog site](http://mbbx6spp.github.com/7languages7weeks) are licensed under the 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode).
