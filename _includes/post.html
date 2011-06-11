@@ -1,0 +1,39 @@
+<article class="post">
+  <header>
+    <h1><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h1>
+    <div class="posted">posted
+    {% if page.date %}
+    <time pubdate="pubdate" datetime="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date_to_long_string }}
+    </time>
+    {% endif %}
+    {% if page.author %}
+    by
+    {% if page.author_url %}
+    <a href="{{ page.author_url }}" rel="author" class="author">{{ page.author }}</a>
+    {% else %}
+    <span class="author">{{ page.author }}</span>
+    {% endif %}
+    {% endif %}
+    {% if page.categories and page.categories[0] %}
+    in
+    <span class="categories">
+      {% for category in page.categories %}
+      {% capture previous_category %}{{ previous_category }}/{{ category }}{% endcapture %}
+      {% unless forloop.first %}:{% endunless %}
+      <a href="{{ site.url }}{{ previous_category }}" rel="tag">{{ category }}</a>
+      {% endfor %}
+    </span>
+    {% endif %}
+    </div>
+  </header>
+  {% if content %}{{ content }}{% else %}{{ page.content }}{% endif %}
+  {% if site.related_posts %}
+  <h2 id="related_posts">Related Posts</h2>
+  <ol>
+  {% for post in site.related_posts %}
+    <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ol>
+  {% endif %}
+</article>

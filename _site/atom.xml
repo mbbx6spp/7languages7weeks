@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Seven Languages in Seven Weeks</title>
+ <link href="http://mbbx6spp.github.com/7languages7weeks/atom.xml" rel="self"/>
+ <link href="http://mbbx6spp.github.com/7languages7weeks"/>
+ <updated>2011-06-10T22:37:40-05:00</updated>
+ <id>http://mbbx6spp.github.com/7languages7weeks</id>
+ <author>
+  <name>Susan Potter</name>
+  <email></email>
+ </author>
+ 
+ <entry>
+  <title>Sample Blog Post</title>
+  <link href="http://mbbx6spp.github.com/7languages7weeks/2011/04/09/Sample-Blog-Post.html"/>
+  <updated>2011-04-09T00:00:00-05:00</updated>
+  <id>http://mbbx6spp.github.com/7languages7weeks/2011/04/09/Sample-Blog-Post</id>
+  <content type="html">&lt;p&gt;This is a sample blog post.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+  <title>Changes From Html5 Boilerplate</title>
+  <link href="http://mbbx6spp.github.com/7languages7weeks/changes/2011/04/08/Changes-From-HTML5-Boilerplate.html"/>
+  <updated>2011-04-08T00:00:00-05:00</updated>
+  <id>http://mbbx6spp.github.com/7languages7weeks/changes/2011/04/08/Changes-From-HTML5-Boilerplate</id>
+  <content type="html">&lt;pre&gt;&lt;code&gt;mkdir _layouts _posts _includes
+mv index.html _layouts/default.html&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Templates were added, things were removed.&lt;/p&gt;</content>
+ </entry>
+ 
+</feed>

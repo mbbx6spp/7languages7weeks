@@ -1,0 +1,92 @@
+<!doctype html>
+{% comment %}
+  http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+{% endcomment %}
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  {% comment %}
+    Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    Remove this if you use the .htaccess
+  {% endcomment %}
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <title>{{page.title}} - {{site.title}}</title>
+  <meta name="description" content="{%if page.description%}{{page.description}}{%else%}{{site.description}}{%endif%}">
+  <meta name="keywords" content="{%if page.categories%}{{page.categories|join:','}}{%else%}{{site.keywords|join:','}}{%endif%}">
+  <meta name="author" content="{%if page.author%}{{page.author}}{%else%}{{site.author.name}}{%endif%}">
+  {% comment %}
+    Mobile viewport optimized: http://j.mp/bplateviewport
+  {% endcomment %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% comment %}
+    Place favicon.ico & apple-touch-icon.png in the root of your domain and
+    delete these references
+  {% endcomment %}
+  <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+  <link rel="apple-touch-icon" href="{{ site.url }}/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/apple-touch-icon.png">
+  <link rel="alternate" type="application/atom+xml" title="Recent blog posts"
+    href="{{ site.url }}/atom.xml">
+  {% comment %}
+    Universal edit button, http://universaleditbutton.org, should point to the github edit page.
+  {% endcomment %}
+  <link rel="alternate" type="application/x-wiki" title="Edit this page on Github." href="{% include edit.url %}">
+  {% comment %}CSS: implied media="all"{% endcomment %}
+  <link rel="stylesheet" href="{{ site.url }}/css/style.css">
+  {% comment %}
+    Uncomment if you are specifically targeting less enabled mobile browsers
+  <link rel="stylesheet" media="handheld" href="{{ site.url }}/css/handheld.css">
+  {% endcomment %}
+  {% comment %}
+    All JavaScript at the bottom, except for Modernizr which enables HTML5
+    elements & feature detects
+  {% endcomment %}
+  <script src="{{ site.url }}/js/libs/modernizr-1.7.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <header id="site_header">{% include site-header.html %}</header>
+    <section id="main">
+    {{ content }}
+    </section>
+    <footer id="site_footer" class="clearfix">{% include site-footer.html %}</footer>
+  </div>
+  {% comment %}
+    JavaScript at the bottom for fast page loading
+  {% endcomment %}
+  {% comment %}
+    Grab Google CDN's jQuery, with a protocol relative URL; fall back to local
+    if necessary
+  {% endcomment %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>
+  window.jQuery || document.write("<script src='{{ site.url }}/js/libs/jquery-1.5.1.min.js'>\x3C/script>")
+  </script>
+  {% comment %}
+    scripts concatenated and minified via ant build script
+  {% endcomment %}
+  <script src="{{ site.url }}/js/plugins.js"></script>
+  <script src="{{ site.url }}/js/script.js"></script>
+  {% comment %}end scripts{% endcomment %}
+  {% comment %}
+    Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb
+  {% endcomment %}
+  <!--[if lt IE 7 ]>
+    <script src="{{ site.url }}/js/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix("img, .png_bg");</script>
+  <![endif]-->
+  {% comment %}
+    mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your
+    site's ID
+  {% endcomment %}
+  <script>
+    var _gaq=[["_setAccount","UA-{{ site.ga }}"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* This is where all custom styles go.*/
+{% include text.css %}
+#main {
+	background: white;
+{% comment %}
+The following is a hack that fixes an issue when the last element insid #main is a <p>. I am not sure why this hack works.
+{% endcomment %}
+	padding-bottom: 0.5px;
+}
+#site_header hgroup, #site_footer, body {
+	background: #AAA;
+}
+#site_header, footer.pagination {
+	background: #CCC;
+}
+#site_header h1, #site_header h2 {
+	display: inline;
+}
+#site_header li, #site_header ul, .post header li, .post header nav ul {
+	display: inline;
+	margin: 0;
+	list-style:none;
+	list-style-image: none;
+}
+#site_header ul img, #site_footer img {
+	vertical-align: middle;
+}
+#site_header a.ui-icon {
+	display: inline-block;
+}
+#site_footer img {
+	float: right;
+}
+#site_footer small {
+	line-height: 22px;
+}
+article {
+	margin-left: 1em;
+}
+footer.pagination {
+	text-align: center;
+}
+footer.pagination .previous {
+	float: left;
+}
+footer.pagination .next {
+	float: right;
+}
+.posted {
+	margin-top: -20px;
+	margin-bottom: 20px;
+	font-style: oblique;
+}
+.float-right {
+	float: right;
+}
+.js #wiki-warning, .no-js #wiki-content {
+	display:none;
+}

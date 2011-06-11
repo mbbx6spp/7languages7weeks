@@ -1,0 +1,42 @@
+---
+layout: default
+title: Home
+---
+<p>
+This is a boilerplate for use in <a href="http://pages.github.com/">Github Pages</a>.
+It is based on <a href="http://html5boilerplate.com">The HTML5 Boilerplate</a>, and
+comes with <a href="http://jquery.org">jQuery</a> and
+<a href="http://960.gs">text.css from 960.gs</a>. Octocat icon from
+<a href="http://designmoo.com/3466/github-icons/">designmoo</a>.
+</p>
+<h2>Instructions</h2>
+<ol>
+ <li>fork this repo
+ <li>rename this repo to <em>user</em>.github.com
+ <li>edit <code>_config.yml</code>
+ <li>edit <code>index.html</code>
+ <li>edit <code>_includes/style.css</code>
+ <li>navigate to <em>user</em>.github.com and enjoy
+</ol>
+<hr>
+<section>
+<h2>Web Log</h2>
+{% for page in paginator.posts %}
+{% include post.html %}
+{% endfor %}
+</section>
+<footer class="pagination">
+{% if paginator.previous_page == 1 %}
+  <a href="{{ site.url }}/blog" rel="prev start" class="previous">Newer</a>
+{% elsif paginator.previous_page %}
+  <a href="{{ site.url }}/page{{paginator.previous_page}}" rel="prev" class="previous">Newer</a>
+{% else %}
+  <span class="previous">Newer</span>
+{% endif %}
+<span class="page-number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+{% if paginator.next_page %}
+  <a href="{{ site.url }}/page{{paginator.next_page}}" rel="next" class="next">Older</a>
+{% else %}
+  <span class="next">Older</span>
+{% endif %}
+</footer>

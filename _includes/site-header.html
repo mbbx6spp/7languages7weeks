@@ -1,0 +1,20 @@
+<hgroup>
+  <h1><a href="{{ site.url }}" class="">{{ site.title }}</a></h1>
+  <h2>{{ site.description }}</h2>
+</hgroup>
+<ul class="ui-widget ui-helper-clearfix">
+  <li class="ui-state-default ui-corner-all"><a href="{{ site.url }}/about" class="ui-icon ui-icon-person" title="About">About</a></li>
+  <li class="ui-state-default ui-corner-all"><a href="{{ site.url }}/wiki" class="ui-icon ui-icon-note" title="Wiki">Wiki</a></li>
+  <li>
+    <a href="http://www.twitter.com/{{ site.author.twitter }}"><img src="http://twitter-badges.s3.amazonaws.com/t_small-b.png" alt="Follow {{ site.author.twitter }} on Twitter" width="22" height="22"></a>
+  </li>
+  <li>
+    <a href="https://github.com/{{ site.author.gh.user }}"><img src="{{ site.url }}/img/github_white_black_cat_32.png" alt="Fork {{ site.author.gh.user }} on Github" width="22" height="22"></a>
+  </li>
+  <li>
+    <a href="{{ site.url }}/atom.xml" class="float-right"><img src="https://d3nwyuy0nl342s.cloudfront.net/images/icons/feed.png" alt="Atom Feed" height="14" width="14"></a>
+  </li>
+  <li>
+    <a id="edit-link" href="{% include edit.url %}" title="Edit this page on GitHub" class="float-right"><img src="http://universaleditbutton.org/images/4/4e/UEB16.png" alt="Edit"></a>
+  </li>
+</ul>
