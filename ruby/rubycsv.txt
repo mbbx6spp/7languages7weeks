@@ -1,0 +1,3 @@
+first, last, country
+Yukihiro, Matsumoto, Japan
+Bruce, Tate, USA
