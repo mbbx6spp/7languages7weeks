@@ -1,28 +1,19 @@
-######################################################
 # Configure the options in this file to your liking.
 # https://github.com/mojombo/jekyll/wiki/configuration
-######################################################
 
 ## Site author's information.
 author:
-  ## Author's name, <meta name=author> in _layouts/default.html and used in
-  ## humans.txt
   name:      Susan Potter
-  ## Author's title
   title:     Software Engineer
-  ## Author's email address
   email:     me@susanpotter.net
-  ## Author's web site
   site:      http://susanpotter.net
-  ## Author's location
   location:  "Urbana, IL, US"
-  ## Author's github user name
   gh:
     user:    mbbx6spp
     repo:    7languages7weeks
-  ## Author's twitter name
   twitter:   SusanPotter
   disqus: 
+    # if you don't have disqus setup for this new site, please make sure to comment it.
     shortname: mbbx6spp-github-blog
 
 ## The absolute URL of your site. Should be user.github.com or whatever is in
@@ -30,10 +21,10 @@ author:
 url:         http://mbbx6spp.github.com/7languages7weeks
 
 ## The name of the site, <title> and <h1> in _layouts/default.html
-title:       "Seven Languages in Seven Weeks"
+title:       "Seven Languages in Seven Weeks #7languages7weeks blog"
 
 ## <meta name=description> and <h2> in /_layouts/default.html
-description: This is a blog about the \#7languages7weeks challenge.
+description: "This is a blog documenting one developer's journey in the \#7languages7weeks challenge."
 
 ## <meta name=keywords> in  /_layouts/default.html, probably not useful anymore.
 keywords:    [ Ruby, Io, Prolog, Scala, Erlang, Clojure, Haskell ]
@@ -53,23 +44,16 @@ exclude: [ ]
 
 ## 
 #future:      true
-
-## Uses RDiscount or [engine] instead of Maruku. Maruku is the default.
 markdown:    maruku
-
 ## Controls the URLs that posts are generated with.
 ## https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   date
-
 ## Enables or disables Jekyll from recreating the site when files are modified.
 #auto:        false
-
 ## Fires up a server that will host your _site directory
 #server:      false
-
 ## Changes the port that the Jekyll server will run on
 #server_port: 4000
-
 ##
 #plugins:     ./_plugins
 
@@ -104,18 +88,12 @@ kramdown:
 ########################
 # Github Pages Overrides
 ########################
-
 ## Produces an index for related posts.
 #lsi:         false
-
 ## Enables highlight tag with Pygments.
 #pygments:    false
-
-##
 #safe:        false
-
 ## Changes the directory where Jekyll will look to transform files
 #source:      .
-
 ## Changes the directory where Jekyll will write files to
 #destination: ./_site
