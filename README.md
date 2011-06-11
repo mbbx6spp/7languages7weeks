@@ -1,7 +1,7 @@
 \#7languages7weeks Challenge
 ============================
 
-This is a repository journaling my journey through the 
+This is a repository documenting my journey through the 
 [#7languages7weeks](https://twitter.com/search/%237languages7weeks)
 challenge.
 
@@ -42,12 +42,12 @@ Developer
 
 Amendments to ***this*** repository will be made by 
 
---add your info here instead of mine--
+--add your info below instead of mine--
 
 * [@SusanPotter](http://twitter.com/SusanPotter) also known as 
 * [mbbx6spp on GitHub](http://github.com/mbbx6spp).
 
---add your info here--
+--add your info above instead of mine--
 
 Newcomers should fork 
 [7languages7weeks repository](http://github.com/mbbx6spp/7languages7weeks)
