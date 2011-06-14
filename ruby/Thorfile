@@ -1,0 +1,21 @@
+require 'rubygems'
+require 'thor'
+
+class SevenWeeks < Thor
+  desc "examples_for DAY", "Run examples for specific day"
+  method_options :count => :integer
+  def examples_for(day)
+    dir = "day#{day}"
+    if File.exists?(dir) && File.directory?(dir)
+      file = File.join(dir, "selfstudy_spec.rb")
+      if File.exists?(file)
+        output = %x[rspec #{file}]
+        puts output
+      else
+        $stderr.puts "ERROR: Self study examples not found in day #{day} directory"
+      end
+    else
+      $stderr.puts "ERROR: Day #{day} examples not found"
+    end
+  end
+end
