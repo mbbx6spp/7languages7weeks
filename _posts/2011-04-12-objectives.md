@@ -2,7 +2,7 @@
 layout: post
 ---
 
-= Objectives
+# Objectives
 
 Tomorrow I will start the #7languages7weeks challenge with a group of other 
 established and budding developers. This seemed strange to a few of my peers 
