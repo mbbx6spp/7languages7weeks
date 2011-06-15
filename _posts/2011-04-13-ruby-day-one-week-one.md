@@ -1,8 +1,10 @@
 ---
-layout: post
+layout: supo_post
+title: "Ruby: Day One (Week One)"
+author: Susan Potter
+author_url: http://susanpotter.net
+date: 2011-06-13
 ---
-
-# Ruby\: Day One (Week One)
 
 I wasn't expecting to be wowed by this day's chapter considering Ruby is
 one of the programming languages I know well. And I wasn't, but I did like
