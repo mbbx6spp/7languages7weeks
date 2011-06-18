@@ -21,3 +21,9 @@ and then force them to do stuff they don't necessarily know how to do so they
 can get acquainted with the documentation and structure of the standard
 libraries. Before my approach was a lot more guided. I think I prefer this
 approach already.
+
+**Edit 2011-06-18**
+Note: I am using RSpec examples to verify my code's behavior
+
+Also please see my day one self study code 
+[on the master branch of mbbx6spp/7langauges7weeks in ruby/day1](https://github.com/mbbx6spp/7languages7weeks/tree/master/ruby/day1)
