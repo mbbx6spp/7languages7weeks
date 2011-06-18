@@ -10,6 +10,7 @@ Day three (week one) code can be found
 [on the master branch under ruby/day3](https://github.com/mbbx6spp/7languages7weeks/tree/master/ruby/day3)
 
 In terms of interesting things learned along the way in this chapter was:
+
 * Realization how much I care about coding style. See [my line comments](https://github.com/mbbx6spp/7languages7weeks/tree/master/ruby/day3/selfstudy.rb)
 about the ActsAsCsv mixin module for more information.
 * Didn't even consider adding class scope methods using +missing_method+ before, but very intuitive for 
