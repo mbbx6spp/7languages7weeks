@@ -10,7 +10,7 @@ Day one (week two) code can be found
 [on the master branch under io/day1](https://github.com/mbbx6spp/7languages7weeks/tree/master/io/day1)
 
 I had a lot of fun investigating Io from the shell. My self-study code has some interesting gems I picked 
-up will reading the Io documents.
+up while reading the Io documents.
 
 I am liking the chaining style of setting up cloned objects:
 <pre>
