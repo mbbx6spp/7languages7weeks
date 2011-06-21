@@ -1,4 +1,11 @@
 #!/usr/bin/env io
+/**
+ * metadoc copyright Susan Potter <me@susanpotter.net>, 2011
+ * metadoc license Creative Commons Attribution-NonCommercial-ShareAlike
+ * metadoc category 7languages7weeks
+ * metadoc description This script shows my research for Day One of the
+ *                     Io section of #7languages7weeks book
+**/
 
 /** FIND SECTION **/
 
@@ -83,7 +90,69 @@ ioStyle println
 
 /** ANSWER **/
 
+test := method(description, expression,
+  if(expression, 
+    (description .. " [PASSED]") println, 
+    (description .. " [FAILED]") println)
+)
+
+test("Io is 'strongly' typed (very loosely speaking)",
+  (1 + 1 == 2) and (try(1+'one') proto == Exception))
+
+test("0 is considered true", 
+  ((0 and true) == true) and ((0 or false) == true))
+
+test("\"\" is considered true", 
+  (("" and true) == true) and (("" or false) == true))
+
+test("nil is considered false", 
+  ((nil and true) == false) and ((nil or false) == false))
+
+// How to tell what a prototype supports
+Object protoSlots := method(self proto slotNames)
+Person := Object clone
+Person age ::= 0
+Person name ::= nil
+
+susan := Person clone setName("Susan") setAge(24) // yeah, right, but I don't feel a day older (except when I exercise) ;)
+test("susan's prototype slots are \"age\", \"name\", \"setAge\", \"setName\", \"type\"",
+  list("age", "name", "setAge", "setName", "type") containsAll(susan protoSlots sort))
+
+Beverage := Object clone do(
+  name ::= nil
+  ingredients := List clone /* overridden in init method below on each clone since dynamic value */
+  init := method(self ingredients = list())
+  addIngredient := method(ingredient, self ingredients append(ingredient))
+)
+
+cosmo := Beverage clone setName("Cosmopolitan")
+cosmo addIngredient("Vodka")
+cosmo addIngredient("Triple Sec")
+cosmo addIngredient("Lime Juice")
+cosmo addIngredient("Cranberry Juice")
+
+mojito := Beverage clone setName("Mojito") 
+mojito addIngredient("Rum")
+mojito addIngredient("Mint leaves")
+mojito addIngredient("Sugar")
+mojito addIngredient("Lime Juice")
+mojito addIngredient("Soda")
+
+test("::= will create a setter for name on Beverage",
+  Beverage slotNames containsAll(list("name", "setName")))
+test(":= will create the getter for ingredients on Beverage",
+  Beverage slotNames contains("ingredients"))
+test(":= will not create the setter for ingredients on Beverage",
+  Beverage slotNames contains("setIngredients") == false)
+test("= will raise an Exception when assigning a value to a slotName not already defined",
+  try(Beverage description = "bla bla bla") isKindOf(Exception))
 
 /** DO **/
+"" println
 
+"To run Io code from a file type at shell prompt: io <iofilename>" println
 
+"To execute the code in a slot given its name you can do:" println
+"  getSlot(slotName) call" println
+"OR" println
+"  perform(slotName, arg1, arg2, etc.)" println
