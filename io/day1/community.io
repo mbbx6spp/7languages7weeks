@@ -1,5 +1,6 @@
 /**
  *metadoc Community copyright Susan Potter <me@susanpotter.net>, 2011
+ *metadoc Community license Creative Commons BY-NC-SA 3.0 Unported
  */
 
 Community := Object clone do(
@@ -8,7 +9,7 @@ Community := Object clone do(
   path ::= nil
   protocol ::= nil
   url := method( protocol .. "://" .. host .. path )
-  print := method(
+  print = method(
     kind println
     url println
   )
@@ -23,11 +24,11 @@ MicroBlog := Community clone setKind("Micro Blog") setProtocol("http")
 ioMailingList := MailingList clone setHost("yahoogroups.com")
 ioMailingList setPath("iolanguage")
 
-ioIrcChannel := IRCChannel clone setHost("freenode.net") setPath("/io")
+ioIRCChannel := IRCChannel clone setHost("freenode.net") setPath("/io")
 
 ioTwitter := MicroBlog clone setHost("twitter.com") setPath("/iolanguage")
 
-ioCommunities := list(ioMailingList, ioIrcChannel, ioTwitter)
+ioCommunities := list(ioMailingList, ioIRCChannel, ioTwitter)
 ioCommunities print = method(
   "Io Communities" println
   "--------------" println
