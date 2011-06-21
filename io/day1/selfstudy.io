@@ -23,6 +23,8 @@ problems foreach(i, problem,
 "" println
 
 // Io Community information
+// With hindsight I would do define the prototypes differently
+// @see community.io for revised version
 CommunityType := Object clone
 CommunityType println := method(
   // TODO
