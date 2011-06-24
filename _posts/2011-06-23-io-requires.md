@@ -6,6 +6,8 @@ author_url: http://susanpotter.net
 date: 2011-06-20
 ---
 
+**Note: This was actually posted on June 23, 2011 NOT June 20. I didn't want to change the permalink again, so just note the correct date!:)**
+
 [@sermoa](http://twitter.com/sermoa) asked a question today in her #7languages7weeks blog post that I found during my day two meaderings by 
 accident: What is Io's equivalent to Ruby's <code>require</code>?
 
