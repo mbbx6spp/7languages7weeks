@@ -1,0 +1,6 @@
+Find:
+* Implementation of Fibonacci series and factorials (in Prolog).
+  - Fibonacci: http://cubbi.com/fibonacci/prolog.html
+  - Factorial: http://www.csupomona.edu/~jrfisher/www/prolog_tutorial/2_2.html
+* Real-world usage of Prolog:
+  - http://kylecordes.com/2010/the-prolog-story
