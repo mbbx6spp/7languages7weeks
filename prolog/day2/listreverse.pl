@@ -1,4 +1,4 @@
-% Very similar to the accumulator idiom in Erlang
+% Using accumulator idiom in Erlang (again).
 
 % reverse_list/2
 reverse_list(List, Reversed) :- reverse_list(List, [], Reversed).
