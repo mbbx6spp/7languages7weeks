@@ -13,3 +13,8 @@ my_insert(X,[Y|Tail],[X,Y|Tail]) :- X =< Y.
 
 % list_sort/2
 list_sort(List,SortedList) :- acc_sort(List,[],SortedList).
+
+% Test cases below
+%list_sort([4, 3, 4, 1, 2, 4, 8, 99, 4], [1, 2, 3, 4, 4, 4, 4, 8, 99]).
+%list_sort([5,4,3,2,1], [1,2,3,4,5]).
+%list_sort([1,1,2,3], [1,1,2,3]).
