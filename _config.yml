@@ -33,7 +33,7 @@ keywords:    [ Ruby, Io, Prolog, Scala, Erlang, Clojure, Haskell ]
 paginate:    5
 
 ## Google Analytics id.
-ga: UA-837842-7
+ga: 837842-7
 
 ## A list of directories and files to exclude from the conversion
 exclude: [ ]
