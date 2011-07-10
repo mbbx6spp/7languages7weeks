@@ -53,7 +53,7 @@ of several Futures into a single chained calculation in such a way that a reason
 concurrent semantics of Futures into parallel code. Note: jlouis wrote an excellent blog post on 
 [*Erlang's parallelism is not parallelism*](http://jlouisramblings.blogspot.com/2011/07/erlangs-parallelism-is-not-parallelism.html)
 which I highly recommend you read. NOW!:)
-* **Futuresfailure method:** When sending a messageto an actorusing !!!that returns a Futureobject 
+* **Futures failure method:** When sending a messageto an actorusing !!!that returns a Futureobject 
 if an exception is thrown it will be contained by the Futureobject and then when get()is called on the Futureit 
 will throw the exception at that time. If instead we want to handle a specific exception to return a particular special value in the 
 case of an exception, then we can use the failure method like so:
