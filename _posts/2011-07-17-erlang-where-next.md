@@ -73,12 +73,12 @@ maintainer, @eproxus, is open to suggestions and contributions.
 This is a great framework written by the OTP developers to primarily test 
 concurrent code in ways to find hard to track down bugs. This is very powerful
 and flexible, but it can be confusing as the documentation (like most things 
-in Erlang and OTP) are geared towards those looking for reference or answers 
+in Erlang and OTP) is geared towards those looking for reference or answers 
 to specific questions.
 
 ### QuviQ's QuickCheck (Property based, Commercial)
 
-I believe QuviQ (a company) was the first on the scene in the Erlang world wit 
+I believe QuviQ (a company) was the first on the scene in the Erlang world with 
 a property based testing library. It differs from case or example based libraries 
 in the sense that you define properties or invariants that your code must uphold
 rather than providing the specific inputs and calculating the expected outputs to 
@@ -112,7 +112,8 @@ This is another property based testing library, which also aims to be as closely
 matching the QuickCheck API as possible too. Dr. Krab (creator of Erjang) is the 
 maintainer of this project and while he an exceptional developer the project may 
 lack momentum compared to PropEr's recent momentum in the open source 
-property-based Erlang library space. But you should check it out when you can!
+property-based Erlang library space. But you should check it out to make your own 
+judgement when choosing a property-based testing library for Erlang!
 
 ### Other
 
@@ -136,15 +137,16 @@ Simon Thompson's vision. It provides emacs *and* Eclipse based refactoring
 tools. I have used the emacs mode and found it very useful. I refuse to 
 touch Eclipse again after 9 years in the Java world unsatisfactorily hopping 
 between IDEs, so I have no idea if it is any good. I do know though that new 
-features are added to emacs version first.
+features are added to the emacs version first.
 
 ### McErlang (Model checker)
 
 I wouldn't recommend using this unless you need to absolutely guarantee or "prove"
 your code does what is advertises it does.  Model checkers aren't exactly testing 
-libraries, they are much more intense and there are only a small handful of times 
-a project would need to be run through a model checker like McErlang. Feel free 
-to decide for yourself.
+libraries, they are much more intense and there are only a small handful projects
+would need to be run through a model checker like McErlang. Feel free to decide 
+for your own project. If you don't know what a model checker is though, you 
+probably will not find this useful for your project.
 
 ## Summary
 
