@@ -1,2 +1,3 @@
 scala/target/
 scala/project/boot/
+erlang/*.beam
